@@ -1082,8 +1082,9 @@ LAPTOP.LSUnderground.Boosting = {
                     end
                 end
 
-                Citizen.SetTimeout(Config.DeleteVehicleDelay * 60 * 1000, function()
-                    Vehicles:Delete(veh, function(success) end)
+                local delay = tonumber(Config.DeleteVehicleDelay) or 0.5
+                Citizen.SetTimeout(delay * 60 * 1000, function()
+                     Vehicles:Delete(veh, function(success) end)
                 end)
             end
 
