@@ -60,7 +60,7 @@
 		"math-expression-evaluator": "^1.3.14",
 		"moment": "^2.29.1",
 		"moment-timezone": "^0.5.27",
-		"mythic-ckeditor": "git+https://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:x-oauth-basic@github.com/mythicrp/ckeditor.git",
+		"mythic-ckeditor": "@github.com/aka-lucifer/ckeditor.git",
 		"parse-ms": "^3.0.0",
 		"prop-types": "^15.7.2",
 		"random-material-color": "^1.0.5",
