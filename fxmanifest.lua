@@ -1,29 +1,27 @@
-name("Mythic Laptop")
-description("Laptop")
-author("[Alzar, Dr Nick]")
-version("v1.0.0")
-url("https://www.mythicrp.com")
-lua54("yes")
-fx_version("cerulean")
-game("gta5")
-client_script("@mythic-base/components/cl_error.lua")
-client_script("@mythic-pwnzor/client/check.lua")
+fx_version 'cerulean'
+game 'gta5'
 
-ui_page("ui/dist/index.html")
+version '1.0.0'
+repository 'https://github.com/Mythic-Framework/mythic-laptop'
 
-files({
-	"ui/dist/*.*",
-})
+client_script '@mythic-base/components/cl_error.lua'
+client_script '@mythic-pwnzor/client/check.lua'
+client_scripts {
+	'client/*.lua',
+	'client/apps/**/*.lua',
+}
 
-client_scripts({
-	"client/*.lua",
-	"client/apps/**/*.lua",
-})
-shared_scripts({
-	"config.lua",
-})
+shared_scripts {
+	'config.lua',
+}
 
-server_scripts({
-	"server/*.lua",
-	"server/apps/**/*.lua",
-})
+server_scripts{
+	'server/*.lua',
+	'server/apps/**/*.lua',
+}
+
+files {
+	'ui/dist/*.*',
+}
+
+ui_page 'ui/dist/index.html'

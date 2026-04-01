@@ -109,6 +109,7 @@ function RetrieveComponents()
 	Sequence = exports["mythic-base"]:FetchComponent("Sequence")
 	Phone = exports["mythic-base"]:FetchComponent("Phone")
 	Laptop = exports["mythic-base"]:FetchComponent("Laptop")
+	Version = exports["mythic-base"]:FetchComponent("Version")
 	RegisterChatCommands()
 end
 
@@ -142,6 +143,7 @@ AddEventHandler("Core:Shared:Ready", function()
 		"Wallet",
 		"Sequence",
 		"Phone",
+		"Version",
 	}, function(error)
 		if #error > 0 then
 			return
@@ -164,6 +166,8 @@ AddEventHandler("Core:Shared:Ready", function()
 			{ label = "A+", value = 120000 }, -- Get Scratching
 			{ label = "S+", value = 150000 },
 		}, true)
+
+		Version:Check('Mythic-Framework/Mythic-VersionCheckers', GetCurrentResourceName())
 	end)
 end)
 
